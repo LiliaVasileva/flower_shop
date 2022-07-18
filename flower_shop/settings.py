@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'flower_shop.flower',
 ]
 
 MIDDLEWARE = [
@@ -76,9 +77,14 @@ WSGI_APPLICATION = 'flower_shop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'flower_shop',
+        'USER': 'postgres',
+        'PASSWORD': '1123QwER',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
+
 }
 
 
