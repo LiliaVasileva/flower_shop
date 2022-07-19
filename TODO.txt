@@ -1,0 +1,7 @@
+1. Finishing Design Home Page;
+2. Creating Users;
+3. Login and Logout;
+4.Creating Gallery Page;
+5.Creating filter page by items;
+6. Should draw Logo - Salvia;
+..Creating integrated system for ordering funeral wreath;
