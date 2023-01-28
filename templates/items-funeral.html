@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    {#    <link rel="stylesheet" href="../../static/css/style.css">#}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="nav" class="section">
+        <div class="nav__item">
+            <ul class="nav__item__ul">
+                <li class="nav__item__li"><a href="{% url 'home' %}">Начало</a></li>
+                <li class="nav__item__li"><a href="{% url 'funeral items' %}">Погребения</a></li>
+                <li class="nav__item__li"><a href="{% url 'wedding items' %}">Сватби</a></li>
+                <li class="nav__item__li"><a href="#Items">Асортимент</a></li>
+                <li class="nav__item__li"><a href="#Contacts">Контакти</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="items" class="section">
+        {% for flower in items %}
+        <div class="item">
+            <img src="{{ flower.item_picture }}" alt="Test">
+            <div class="item_info">
+                <h2 class="info__title">{{ flower.item_name }}</h2>
+                <div class="divider"></div>
+                <p class="info_desc">Цена: {{ flower.item_price }}</p>
+                <button class="btn">Галерия<i class="fa-solid fa-circle-arrow-right"></i></button>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>

@@ -1,7 +1,10 @@
 from django.urls import path
-from flower_shop.flower.views import home_page
+from django.views.generic import TemplateView
+from flower_shop.flower.views import FlowerWeddingTemplateView, FlowerFuneralTemplateView
+
 
 
 urlpatterns = [
-    path('/',home_page,name='home'),
+    path('wedding/', FlowerWeddingTemplateView.as_view(), name='wedding items'),
+    path('funeral/', FlowerFuneralTemplateView.as_view(), name='funeral items'),
 ]

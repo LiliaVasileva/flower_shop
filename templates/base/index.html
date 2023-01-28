@@ -1,66 +1,75 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="../../static/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header id="header" class="section">
-        <img src="../../static/images/main_picture.jpg" alt="" class="header-img" />
-        <div class="nav">
-            <h2><i class="fa-brands fa-gg"></i>Салвия</h2>
-            <!-- <h2><i class="fa-solid fa-bars"></i></h2> -->
-            <h2>Вход<i class="fa-solid fa-arrow-right-to-bracket"></i></h2>
-        </div>
-        <section class="info">
-            <h1 class="info__title">Цветарски магазин с традиции</h1>
-            <h3 class="info__desc">Повече от 40 годишен опит в аранжирането и озеляването.</h3>
-        </section>
-    </header>
-    <section id="gallery" class="section">
-        <div class="gallery-articles">
-            <article class="gallery__article">
-                <h1>Сватба</h1>
-                <img src="/static/images/wedding.jpg" alt="">
-            </article>
-            <article class="gallery__article">
-                <h1>Асортимент</h1>
-                <img src="/static/images/asortiment.jpg" alt="">
-            </article>
-            <article class="gallery__article">
+<header id="header" class="section">
+    <img src="{% static 'images/main_picture.jpg' %}" alt="" class="header-img"/>
+    {# <img src="../../static/images/main_picture.jpg" alt="" class="header-img" />#}
+    <div class="nav">
+        <h2><i class="fa-brands fa-gg"></i>Салвия</h2>
+        <!-- <h2><i class="fa-solid fa-bars"></i></h2> -->
+        <h2>Вход<i class="fa-solid fa-arrow-right-to-bracket"></i></h2>
+    </div>
+    <section class="info">
+        <h1 class="info__title">Цветарски магазин с традиции</h1>
+        <h3 class="info__desc">Повече от 40 годишен опит в аранжирането и озеляването.</h3>
+    </section>
+</header>
+<section id="gallery" class="section">
+    <div class="gallery-articles">
+        <article class="gallery__article">
+            <h1>Сватба</h1>
+            <img src="/static/images/wedding.jpg" alt="">
+        </article>
+        <article class="gallery__article">
+            <h1>Асортимент</h1>
+            <img src="/static/images/asortiment.jpg" alt="">
+        </article>
+        <article class="gallery__article">
+            <a href="{% url 'funeral items' %}">
                 <h1>Погребения</h1>
                 <img src="/static/images/funeral.jpg" alt="">
-            </article>
-        </div>
+            </a>
+        </article>
 
-    </section>
-    <section id="hustle" class="section">
-        <img src="/static/images//salvia.jpg" alt="">
-        <div class="info">
-            <h2 class="info__title">Асортимент</h2>
-            <p class="info__desc">Богат избор от цветни възможности </p>
-            <ul class="info__items" role="list">
 
-            </ul>
-        </div>
-    </section>
-    <section id="hustle" class="section">
-        <div class="info">
-            <h2 class="info__title">Контакти</h2>
-            <p class="info__desc">Богат избор от цветни възможности </p>
-            <ul class="info__items" role="list">
-            </ul>
-        </div>
-        <img src="/static/images//we_are_open.jpg" alt="">
-    </section>
-    <footer  id="footer" class="section">
+    </div>
 
-    </footer>
+</section>
+<section id="hustle" class="section">
+    <img src="/static/images//salvia.jpg" alt="">
+    <div class="info">
+        <h2 class="info__title">Асортимент</h2>
+        <p class="info__desc">Богат избор от цветни възможности </p>
+        <ul class="info__items" role="list">
 
+        </ul>
+    </div>
+</section>
+<section id="hustle" class="section">
+    <div class="info">
+        <h2 class="info__title">Контакти</h2>
+        <p class="info__desc">Богат избор от цветни възможности </p>
+        <ul class="info__items" role="list">
+        </ul>
+    </div>
+    <img src="/static/images//we_are_open.jpg" alt="">
+</section>
+<footer id="footer" class="section">
+</footer>
 </body>
+
 </html>
